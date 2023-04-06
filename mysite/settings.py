@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "shifter",
     "rest_framework",
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware"
 ]
 
 ROOT_URLCONF = "mysite.urls"
@@ -76,7 +78,25 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "mysite.wsgi.application"
 
+CORS_ALLOW_ALL_ORIGINS = True
 
+CORS_ALLOW_ALL_METHODS = [
+    "GET", "POST" # add allowed methods here
+]
+
+# CORS_URLS_REGEX = r""
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
