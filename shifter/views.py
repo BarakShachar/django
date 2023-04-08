@@ -12,7 +12,7 @@ class UserView(APIView):
             request.data.get("username") == "admin"
             and request.data.get("password") == "admin"
         ):
-            return Response({"token": "abcd", "name": "Sabrina", "lastName":"Khazanov","userId":"admin"})
+            return Response({"token": "abcd", "name": "BobBobi", "lastName":"Johnson","userId":"admin","jobDescription":"Graphic Designer" })
         return Response({"message": "username does not exist"}, status=400)
 
 
@@ -33,7 +33,7 @@ class TeamView(APIView):
                     },
                     {
                         "imageSrc": "Empty",
-                        "name": "Bob Johnson",
+                        "name": "BobBobi Johnson",
                         "jobDescription": "Graphic Designer",
                     },
                 ]
