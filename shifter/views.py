@@ -12,7 +12,7 @@ class UserView(APIView):
             request.data.get("username") == "admin"
             and request.data.get("password") == "admin"
         ):
-            return Response({"key": "abcd"})
+            return Response({"token": "abcd", "name": "Sabrina", "lastName":"Khazanov","userId":"admin"})
         return Response({"message": "username does not exist"}, status=400)
 
 
