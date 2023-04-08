@@ -19,8 +19,24 @@ class UserView(APIView):
 class TeamView(APIView):
     def get(self, request):
         return Response(
-            {[{ "imageSrc": "Empty", "name": "John Doe", "jobDescription": "Software Developer" },
-                { "imageSrc": "Empty", "name": "Jane Smith", "jobDescription": "Project Manager" },
-                {"imageSrc": "Empty", "name": "Bob Johnson", "jobDescription": "Graphic Designer" }]}
-                , status=200
+            {
+                "employee": [
+                    {
+                        "imageSrc": "Empty",
+                        "name": "John Doe",
+                        "jobDescription": "Software Developer",
+                    },
+                    {
+                        "imageSrc": "Empty",
+                        "name": "Jane Smith",
+                        "jobDescription": "Project Manager",
+                    },
+                    {
+                        "imageSrc": "Empty",
+                        "name": "Bob Johnson",
+                        "jobDescription": "Graphic Designer",
+                    },
+                ]
+            },
+            status=200,
         )
