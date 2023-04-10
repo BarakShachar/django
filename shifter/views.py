@@ -52,7 +52,7 @@ class TeamView(APIView):
 
 
 class ShiftsView(APIView):
-    def get(self, request, id):
+    def get(self, request, team_id):
         return Response(
             {
                 "shifts": [
