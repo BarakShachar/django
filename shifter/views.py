@@ -24,15 +24,18 @@ class TeamView(APIView):
                     {
                         "imageSrc": "Empty",
                         "name": "John Doe",
+                        "Team": "Noc Team",
                         "jobDescription": "Software Developer",
                     },
                     {
                         "imageSrc": "Empty",
                         "name": "Jane Smith",
+                        "Team": "Noc Team",
                         "jobDescription": "Project Manager",
                     },
                     {
                         "imageSrc": "Empty",
+                        "Team": "Noc Team",
                         "name": "BobBobi Johnson",
                         "jobDescription": "Graphic Designer",
                     },
