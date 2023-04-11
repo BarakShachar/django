@@ -15,7 +15,7 @@ class UserView(APIView):
             return Response(
                 {
                     "token": "abcd",
-                    "name": "BobBobi",
+                    "name": "barak",
                     "lastName": "Johnson",
                     "userId": "admin",
                     "jobDescription": "Graphic Designer",
