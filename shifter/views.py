@@ -32,20 +32,23 @@ class TeamView(APIView):
                 "employee": [
                     {
                         "imageSrc": "Empty",
-                        "name": "John Doe",
+                        "name": "BobBobi",
+                        "lastName": "Johnson",
                         "Team": "Noc Team",
                         "jobDescription": "Software Developer",
                     },
                     {
                         "imageSrc": "Empty",
-                        "name": "Jane Smith",
+                        "name": "Jane"
+                        "lastName":"Smith",
                         "Team": "Noc",
                         "jobDescription": "Project Manager",
                     },
                     {
                         "imageSrc": "Empty",
+                        "name": "Sabrina"
+                        "lastName": "Khazanov",
                         "Team": "Noc",
-                        "name": "BobBobi Johnson",
                         "jobDescription": "Graphic Designer",
                     },
                 ]
