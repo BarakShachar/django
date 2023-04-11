@@ -40,7 +40,7 @@ class TeamView(APIView):
                     {
                         "imageSrc": "Empty",
                         "name": "Jane",
-                        "lastName":"Smith",
+                        "lastName": "Smith",
                         "team": "Noc",
                         "jobDescription": "Project Manager",
                     },
@@ -59,6 +59,21 @@ class TeamView(APIView):
 
 class ShiftsView(APIView):
     def get(self, request, team_id):
+        if request.query_params.get("date"):
+            return Response(
+                {
+                    "shifts": [
+                        {
+                            "name": "barak",
+                            "start": ["2023-04-07T09:00:00", "2023-04-03T12:00:00"],
+                            "end": ["2023-04-07T16:00:00", "2023-04-03T16:00:00"],
+                            "color": "#f59e59",
+                            "title": "barak",
+                        },
+                    ]
+                },
+                status=200,
+            )
         return Response(
             {
                 "shifts": [
