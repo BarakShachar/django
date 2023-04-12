@@ -7,6 +7,19 @@ from rest_framework import status
 
 
 class UserView(APIView):
+    def get(self, request):
+        if request.query_params.get("token") == "abcd":
+            return Response(
+                {
+                    "name": "barak",
+                    "lastName": "Johnson",
+                    "userId": "admin",
+                    "jobDescription": "Graphic Designer",
+                    "imageSrc": "Empty",
+                }
+            )
+        return Response({"message": "invalid token"}, status=400)
+
     def post(self, request):
         if (
             request.data.get("username") == "admin"
@@ -15,11 +28,6 @@ class UserView(APIView):
             return Response(
                 {
                     "token": "abcd",
-                    "name": "barak",
-                    "lastName": "Johnson",
-                    "userId": "admin",
-                    "jobDescription": "Graphic Designer",
-                    "imageSrc": "Empty",
                 }
             )
         return Response({"message": "username does not exist"}, status=400)
